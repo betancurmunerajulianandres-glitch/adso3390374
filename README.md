@@ -18,6 +18,8 @@ Lorem ipsum dolor sit amet.
 |01. |css         |Look & Feel - Cascading Style Sheet   |
 |01. |Javascript  |Behavior - Programing Language        |
 
+[profile](src/imgs/viltrum.jpeg)
+
 [ADSO Files DRIVE](https://tinyurl.com/wnkk334u)
 
 [VERCEL URL](https://vercel.app)
