@@ -23,10 +23,60 @@ color: #ffff;
     justify-content: center;
     align-items: center;
     min-height: 100dvh;
+    &.emmet{
+        background-color: #70BB14;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%2363a511' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23568f0f' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%2349780c' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%233c620a' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%232e4c08' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23213505' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23131F03' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+    }
+
+    a:is(:link, :visited){
+        &.btn-home{
+            background-color: #fff;
+            border-radius: 50%;
+            border: 2px solid rgb(255, 255, 255);
+            position:fixed;
+            top:1rem;
+            left:1rem;
+            display: grid;
+            place-items: center;
+            width: 60px;
+            height: 60px;
+            transform: scale(.8);
+            opacity: .8;
+            transition: all 0.2s ease-in;
+            &:hover{
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    }
     /* Main*/
     main{
         padding: 1rem;
         width: 380px;
+        header{
+            flex-direction:column ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 200px;
+                border: 8px solid;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            h1{
+                font-weight: 800;
+                font-size: 2.6rem;
+            }
+
+            h4{
+                font-weight: 300;
+            }
+
+        }
         header.mainmenu{
             display: flex;
             justify-content: center;
@@ -114,5 +164,49 @@ color: #ffff;
 
 
         }    }
+        section{
+            background-color: #000000;
+            padding: 1rem;
+            margin: 2rem auto;
+            border-radius: 0.4rem;
+            h2{
+                background-color: #fff;
+                padding: 0.2rem;
+                margin: 0;
+                color: #000000;
+                position: relative;
+                border-radius: 0.4rem;
+                em{
+                    font-style: normal ;
+                    position: absolute;
+                    top: 0.5rem;
+                    right: 0.5rem;
+                    background-color: #000;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 3rem;
+                    color: #fff;
+                    height: 40px;
+                    width: 40px;
+
+
+                
+
+            }
+        }
+        h4{
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid #fff;
+            margin: 0;
+        }
+
+        xmp{
+            background-color: #0009;
+            padding-bottom: 1rem;
+            border-radius: 0,4rem;
+            color: #70bb14;
+        }
 }
 
