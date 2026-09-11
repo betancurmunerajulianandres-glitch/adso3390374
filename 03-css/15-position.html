@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15 - Position</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+    </head>
+<body class="css">
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+    </a>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #1a1a1a; color: #fff; }
+        
+        .caja {
+            width: 200px;
+            height: 80px;
+            padding: 10px;
+            margin: 10px 0;
+            background: #2d2d2d;
+            border: 2px solid #555;
+        }
+
+        .contenedor {
+            background: #2a2a2a;
+            padding: 20px;
+            margin: 20px 0;
+            border: 3px dashed #666;
+            position: relative; /* necesario para el absolute */
+            height: 250px;
+        }
+
+        .ejemplo {
+            background: #6c5ce7;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            width: 180px;
+        }
+
+        /* ESTILOS PARA STICKY */
+        .scroll-box {
+            height: 200px;
+            overflow-y: scroll;
+            border: 2px solid #555;
+            background: #222;
+            padding: 10px;
+        }
+        .sticky-item {
+            position: sticky;
+            top: 0;
+            background: #fd79a8;
+            padding: 15px;
+            font-weight: bold;
+            color: #fff;
+            z-index: 10;
+            border-radius: 5px;
+        }
+        .item {
+            padding: 15px;
+            border-bottom: 1px solid #444;
+            background: #2d2d2d;
+            color: #ccc;
+        }
+        code {
+            background: #444;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #fd79a8;
+        }
+        h3 { color: #dfe6e9; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 256 256">
+            <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+        </svg>
+    </a>
+    
+    <main>
+        <header class="mainmenu">
+            <h1>15 - Position</h1>
+            <ul>
+                <li>Static</li>
+                <li>Relative</li>
+                <li>Absolute</li>
+                <li>Fixed</li>
+                <li>Sticky</li>
+            </ul>
+        </header>
+
+        <section>
+            <h2>📌 5 Posiciones CSS</h2>
+
+            <!-- 1. STATIC -->
+            <div class="contenedor">
+                <h3>1. STATIC (por defecto)</h3>
+                <div class="caja" style="position:static;">
+                    <div class="ejemplo" style="position:static;">
+                        Static: estoy aquí fijo
+                    </div>
+                </div>
+                <p style="font-size:14px; color:#999;">
+                    ❌ top/left NO funcionan. Sigue el flujo normal.
+                </p>
+            </div>
+
+            <!-- 2. RELATIVE -->
+            <div class="contenedor">
+                <h3>2. RELATIVE (se mueve desde su sitio)</h3>
+                <div class="caja" style="position:relative; top:20px; left:30px; background:#ffeaa7;">
+                    <div class="ejemplo" style="position:relative; top:10px; left:20px; background:#0984e3;">
+                        Relative: movido 10px abajo, 20px derecha
+                    </div>
+                </div>
+                <p style="font-size:14px; color:#999;">
+                    ✅ top/left SÍ funcionan. Respeta su espacio original (el hueco queda).
+                </p>
+            </div>
+
+            <!-- 3. ABSOLUTE -->
+            <div class="contenedor">
+                <h3>3. ABSOLUTE (respecto al padre con position)</h3>
+                <div class="caja" style="background:#dfe6e9; height:150px;">
+                    <div class="ejemplo" style="position:absolute; bottom:10px; right:10px; background:#e17055;">
+                        Absolute: abajo-derecha del .contenedor
+                    </div>
+                </div>
+                <p style="font-size:14px; color:#999;">
+                    ✅ Se saca del flujo. Se posiciona respecto al .contenedor (que tiene <code>position:relative</code>).
+                </p>
+            </div>
+
+            <!-- 4. FIXED -->
+            <div class="contenedor">
+                <h3>4. FIXED (fijo en la ventana)</h3>
+                <div class="caja" style="background:#dfe6e9;">
+                    <div class="ejemplo" style="position:fixed; bottom:20px; right:20px; background:#00b894; z-index:999;">
+                        Fixed: fijo en la pantalla
+                    </div>
+                </div>
+                <p style="font-size:14px; color:#999;">
+                    ✅ Se saca del flujo. Siempre respecto a la ventana (no se mueve al hacer scroll).
+                </p>
+            </div>
+
+            <!-- 5. STICKY (NUEVO) -->
+            <div class="contenedor" style="height: auto;">
+                <h3>5. STICKY (híbrido entre relative y fixed)</h3>
+                <div class="scroll-box">
+                    <div class="sticky-item">📌 ¡Este sticky se queda pegado al hacer scroll!</div>
+                    <div class="item">Contenido 1</div>
+                    <div class="item">Contenido 2</div>
+                    <div class="item">Contenido 3</div>
+                    <div class="item">Contenido 4</div>
+                    <div class="item">Contenido 5</div>
+                    <div class="item">Contenido 6</div>
+                    <div class="item">Contenido 7</div>
+                    <div class="item">Contenido 8</div>
+                    <div class="item">Contenido 9</div>
+                    <div class="item">Contenido 10</div>
+                </div>
+                <p style="font-size:14px; color:#999;">
+                    ✅ Se comporta como <strong>relative</strong> hasta que llega al <strong>top:0</strong>, luego se fija como <strong>fixed</strong> dentro de su contenedor.
+                </p>
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>

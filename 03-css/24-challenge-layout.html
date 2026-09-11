@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sprite - Reto CSS Sprites</title>
+<style>
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background:linear-gradient(to bottom, #17a053 10%, #06aaf7 100%);
+    min-height: 100vh;
+  }
+
+  a { text-decoration: none; color: inherit; }
+
+  
+  [class*="sprite-"] {
+    background-image: url("imgs/spriteweb.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+
+  .sprite-bottle      { width:  69px; height: 197px; background-position: -304px  -14px; } /* botella */
+  .sprite-photo1      { width: 323px; height: 202px; background-position: -471px   -6px; } /* foto splash botella */
+  .sprite-can         { width:  92px; height: 158px; background-position:  -94px -213px; } /* lata */
+  .sprite-gray        { width: 159px; height: 173px; background-position: -260px -215px; } /* logo gris */
+  .sprite-photo2      { width: 323px; height: 202px; background-position: -471px -214px; } /* foto splash diagonal */
+  .sprite-green       { width: 192px; height: 192px; background-position:  -10px -398px; } /* logo sobre cuadro verde */
+  .sprite-color       { width: 159px; height: 111px; background-position: -260px -382px; } /* logo a color */
+  .sprite-badge       { width:  83px; height:  83px; background-position: -298px -501px; } /* insignia circular */
+  .sprite-group       { width: 216px; height: 175px; background-position: -519px -422px; } /* pack de productos */
+
+  /* ================= HEADER ================= */
+  header {
+    background-color: #17a053 0%;
+    padding: 40px 0 0;
+    text-align: center;
+    min-height: 300px;
+  }
+
+  .logo {
+    margin: 0 auto 25px;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  nav ul li {
+    flex: 1;
+  }
+
+  nav ul li a {
+    display: block;
+    background-color: #1f6b34;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+    text-align: center;
+    padding: 22px 10px;
+    margin: 0 6px;
+    border-bottom: 4px solid #fff;
+    transition: background-color .25s ease, border-color .25s ease;
+  }
+
+  nav ul li a:hover {
+    background-color: #0f4c22;
+    border-bottom-color: #f4c430;
+  }
+
+  /* ================= PORTAFOLIO ================= */
+  .portfolio {
+    background-color: #1f6b34;
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    
+  }
+
+  .portfolio-card {
+    position: relative;
+    width: 270px;
+    height: 169px;
+    border: 3px solid #fff;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .portfolio-card .sprite-photo1 {
+    width: 100%;
+    height: 100%;
+    background-size: 668px 501px;    
+    background-position: -394px -5px; 
+    transition: transform .4s ease;
+  }
+
+  .portfolio-card:hover .sprite-photo1 {
+    transform: scale(1.08);
+  }
+
+  .portfolio-card span {
+    position: absolute;
+    top: 14px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #121312;
+  }
+
+  /* ================= FILAS DE CONTENIDO ================= */
+  .content {
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+  }
+
+  .row {
+    background-color: #fdfdfd;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 25px 30px;
+    margin-bottom: 18px;
+    transition: background-color .25s ease;
+    border: 10px solid ;
+    border-color: #1f6b34;
+  }
+
+  .row .sprite-badge {
+    flex-shrink: 0;
+  }
+
+  .row p {
+    flex: 1;
+    color: #181717;
+    line-height: 1.7;
+    font-size: 40px;
+    text-align: justify;
+    transition: color .25s ease;
+    font-family: comic sans ms, sans-serif;
+    border-color: #143d1f;
+  }
+
+  .row .sprite-can {
+    flex-shrink: 0;
+  }
+
+  .row:hover p {
+    color: #26bb26;
+  }
+
+  /* ================= FOOTER ================= */
+  footer {
+    background-color: #fff;
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 40px 20px 30px;
+    text-align: center;
+  }
+
+  footer .sprite-group {
+    margin: 0 auto;
+  }
+
+  footer nav ul {
+    margin-top: 35px;
+    max-width: 800px;
+  }
+
+  footer nav ul li a {
+    background: none;
+    color: #333;
+    font-size: 14px;
+    padding: 10px 5px 14px;
+    margin: 0 15px;
+    border-bottom: 3px solid transparent;
+  }
+
+  footer nav ul li a:hover {
+    background: none;
+    color: #1f6b34;
+    border-bottom-color: #1f6b34;
+  }
+
+  footer p.copy {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #999;
+  }
+
+  
+
+</style>
+</head>
+<body>
+  <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+    </a>
+
+  <header>
+    <div class="logo sprite-green"></div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Portafolio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="portfolio">
+    <div class="portfolio-card">
+      <span>Sprite 01</span>
+      <div class="sprite-photo1"></div>
+    </div>
+    <div class="portfolio-card">
+      <span>Sprite 02</span>
+      <div class="sprite-photo1"></div>
+    </div>
+    <div class="portfolio-card">
+      <span>Sprite 03</span>
+      <div class="sprite-photo1"></div>
+    </div>
+  </section>
+
+  <section class="content">
+
+    <div class="row">
+      <div class="sprite-badge"></div>
+      <p>Quiero sprite, Dios como anelo tener sprite.</p>
+      <div class="sprite-can"></div>
+    </div>
+
+    <div class="row">
+      <div class="sprite-badge"></div>
+      <p>El sprite es vida.</p>
+      <div class="sprite-can"></div>
+    </div>
+
+    <div class="row">
+      <div class="sprite-badge"></div>
+      <p>¡Que calor! ,¿alguien me trae un sprite?.</p>
+      <div class="sprite-can"></div>
+    </div>
+
+    <div class="row">
+      <div class="sprite-badge"></div>
+      <p>El lima limon es lo mejor que ha creado esta porqueria de humanidad.</p>
+      <div class="sprite-can"></div>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="sprite-group"></div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Portafolio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+    <p class="copy">&copy; 2026 Sprite. Reto CSS Sprites.</p>
+  </footer>
+
+</body>
+</html>
