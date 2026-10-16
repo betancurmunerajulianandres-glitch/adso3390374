@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 - Advanced Selectors</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        .caja-filtro img {
+            width: 100%;
+            height: 200px;        
+            object-fit: contain;
+        }
+
+        .galeria-filtros .caja-filtro:nth-child(1) img {
+            filter: grayscale(100%);
+        }
+
+        .galeria-filtros .caja-filtro:nth-child(2) img {
+            filter: blur(4px);
+        }
+
+        .galeria-filtros .caja-filtro:nth-child(3) img {
+            filter: sepia(100%);
+        }
+
+        .galeria-filtros .caja-filtro:nth-child(4) img {
+            filter: brightness(1.5) contrast(1.8);
+        }
+
+        .galeria-filtros .caja-filtro:nth-child(5) img {
+            filter: saturate(300%);
+        }
+
+        .galeria-filtros .caja-filtro:nth-child(6) img {
+            filter: invert(100%);
+        }
+
+        .galeria-filtros .caja-filtro:nth-child(7) img {
+            filter: drop-shadow(8px 8px 10px rgba(253, 4, 4, 0.8));
+        }
+
+        .galeria-filtros .caja-filtro:nth-child(8) img {
+            filter: grayscale(50%) blur(2px) brightness(1.2) contrast(1.2) sepia(30%);
+        }
+        
+    
+    </style>
+</head>
+<body class="css">
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+    </a>
+        <main>
+            <header class="mainmenu ">
+            <h1>31-filters</h1>
+            <h4>Defines visual effects (like blur and saturation).</h4>
+            
+            </header>
+        <main>
+
+    <section class="galeria-filtros">
+    
+    <div class="caja-filtro">
+        <h3>Escala de Grises</h3>
+        <img src="imgs/natsu.png" alt="Natsu">
+    </div>
+
+    
+    <div class="caja-filtro">
+        <h3>Desenfoque</h3>
+        <img src="imgs/natsu.png" alt="Natsu">
+    </div>
+
+    
+    <div class="caja-filtro">
+        <h3>Sepia</h3>
+        <img src="imgs/natsu.png" alt="Natsu">
+    </div>
+
+    
+    <div class="caja-filtro">
+        <h3>Brillo y Contraste</h3>
+        <img src="imgs/natsu.png" alt="Natsu">
+    </div>
+
+    <div class="caja-filtro">
+        <h3>Saturación</h3>
+        <img src="imgs/natsu.png" alt="Natsu">
+    </div>
+
+    
+    <div class="caja-filtro">
+        <h3>Invertido</h3>
+        <img src="imgs/natsu.png" alt="Natsu">
+    </div>
+
+    
+    <div class="caja-filtro">
+        <h3>Sombra</h3>
+        <img src="imgs/natsu.png" alt="Natsu">
+    </div>
+
+    
+    <div class="caja-filtro">
+        <h3>Múltiple</h3>
+        <img src="imgs/natsu.png" alt="Natsu">
+    </div>
+
+</section>
+    
+    </main>
+</body>
+</html>
