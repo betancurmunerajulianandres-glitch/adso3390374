@@ -6,42 +6,47 @@
     <title>05 - Advanced Selectors</title>
     <link rel="stylesheet" href="../src/css/master.css">
     <style>
-        .caja-filtro img {
-            width: 100%;
-            height: 200px;        
-            object-fit: contain;
-        }
+        img.filter{
+            background: linear-gradient(45deg, crimson 50%, darkblue 50%);
+            display: block;
+            margin: 1rem auto;
+            outline: 2px solid #ffffff;
+            border-radius: 14px;
+            width: 140px;
+            padding: 0.4rem;
+            corner-shape: squircle;
+            transition: all 0.4s ease-in;
 
-        .galeria-filtros .caja-filtro:nth-child(1) img {
-            filter: grayscale(100%);
-        }
+            &.filter1{
+                filter: grayscale(1);
+            }
 
-        .galeria-filtros .caja-filtro:nth-child(2) img {
-            filter: blur(4px);
-        }
+            &.filter2{
+                filter: blur(5px);
+            }
+            &.filter3{
+                filter: sepia(1);
+            }
 
-        .galeria-filtros .caja-filtro:nth-child(3) img {
-            filter: sepia(100%);
-        }
+            &.filter4{
+                filter: brightness(.4);
+            }
 
-        .galeria-filtros .caja-filtro:nth-child(4) img {
-            filter: brightness(1.5) contrast(1.8);
-        }
+            &.filter5{
+                filter: Invert();
+            }
 
-        .galeria-filtros .caja-filtro:nth-child(5) img {
-            filter: saturate(300%);
-        }
+            &.filter6{
+                filter: drop-shadow(0 0 12px #fff);
+            }
+            &.filter7{
+                filter: hue-rotate(180deg);
+            }
 
-        .galeria-filtros .caja-filtro:nth-child(6) img {
-            filter: invert(100%);
-        }
 
-        .galeria-filtros .caja-filtro:nth-child(7) img {
-            filter: drop-shadow(8px 8px 10px rgba(253, 4, 4, 0.8));
-        }
-
-        .galeria-filtros .caja-filtro:nth-child(8) img {
-            filter: grayscale(50%) blur(2px) brightness(1.2) contrast(1.2) sepia(30%);
+            &:hover{
+                filter: none;
+            }
         }
         
     
@@ -59,55 +64,22 @@
             </header>
         <main>
 
-    <section class="galeria-filtros">
-    
-    <div class="caja-filtro">
-        <h3>Escala de Grises</h3>
-        <img src="imgs/natsu.png" alt="Natsu">
-    </div>
-
-    
-    <div class="caja-filtro">
-        <h3>Desenfoque</h3>
-        <img src="imgs/natsu.png" alt="Natsu">
-    </div>
-
-    
-    <div class="caja-filtro">
-        <h3>Sepia</h3>
-        <img src="imgs/natsu.png" alt="Natsu">
-    </div>
-
-    
-    <div class="caja-filtro">
-        <h3>Brillo y Contraste</h3>
-        <img src="imgs/natsu.png" alt="Natsu">
-    </div>
-
-    <div class="caja-filtro">
-        <h3>Saturación</h3>
-        <img src="imgs/natsu.png" alt="Natsu">
-    </div>
-
-    
-    <div class="caja-filtro">
-        <h3>Invertido</h3>
-        <img src="imgs/natsu.png" alt="Natsu">
-    </div>
-
-    
-    <div class="caja-filtro">
-        <h3>Sombra</h3>
-        <img src="imgs/natsu.png" alt="Natsu">
-    </div>
-
-    
-    <div class="caja-filtro">
-        <h3>Múltiple</h3>
-        <img src="imgs/natsu.png" alt="Natsu">
-    </div>
-
-</section>
+    <section>
+            <h4>GrayScale</h4>
+            <img class="filter filter1" src="imgs/natsu.png" alt="natsu">
+            <h4>Blur</h4>
+            <img class="filter filter2" src="imgs/natsu.png" alt="natsu">
+            <h4>Sepia</h4>
+            <img class="filter filter3" src="imgs/natsu.png" alt="natsu">
+            <h4>Brightness</h4>
+            <img class="filter filter4" src="imgs/natsu.png" alt="natsu">
+            <h4>Invert</h4>
+            <img class="filter filter5" src="imgs/natsu.png" alt="natsu">
+            <h4>Drop Shadow</h4>
+            <img class="filter filter6" src="imgs/natsu.png" alt="natsu">
+            <h4>HUE Rotate</h4>
+            <img class="filter filter7" src="imgs/natsu.png" alt="natsu">
+        </section>
     
     </main>
 </body>

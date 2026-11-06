@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>39-challenge-responsive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <style>
+
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("imgs/fairytail.webp");
+            background-position: center 8%; ;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            margin: 0;
+            
+        }
+
+        
+        .header-titulo {
+            margin: 0;
+            padding: 0;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 80%;
+            width: 600px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            vertical-align: top;
+        }
+
+        .personajes {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .personaje {
+            display: inline-block;
+            vertical-align: top;
+            width: 200px;
+            margin: 10px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(243, 242, 242, 0.7));
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .personaje:hover {
+            transform: translateY(-6px);
+        }
+
+        .personaje img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+            border-bottom: 2px solid #fff;
+        }
+
+        .personaje h2 {
+            margin: 0;
+            padding: 15px 10px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #fdfdfc;
+            background-color: #000;
+        }
+
+        .detalle {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .ficha {
+            background-color: rgba(0, 0, 0, 0.75);
+            margin-bottom: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            zoom: 1;
+        }
+
+        
+        .ficha::after {
+            clear: both;
+        }
+
+        .ficha-img {
+            float: left;
+            width: 35%;
+        }
+
+        .ficha-img img {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            display: block;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .ficha-texto {
+            margin-left: 35%;
+            padding: 30px;
+        }
+
+        .ficha-texto h3 {
+            margin: 0 0 15px 0;
+            padding-bottom: 8px;
+            font-size: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #fbfcfa;
+            border-bottom: 2px solid #fff;
+        }
+
+        .ficha-texto p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            text-align: justify;
+            color: #ddd;
+        }
+
+        @media (max-width: 800px) {
+            .ficha-img {
+                float: none;
+                width: 100%;
+            }
+
+            .ficha-img img {
+                height: 250px;
+            }
+
+            .ficha-texto {
+                margin-left: 0;
+                padding: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="header-titulo">
+        <img src="imgs/fairy_tail logo.png" alt="Fairy Tail Logo" class="logo">
+    </div>
+
+    
+    <div class="personajes">
+        <div class="personaje">
+            <img src="imgs/natsu.jpg" alt="Natsu Dragneel">
+            <h2>Natsu</h2>
+        </div>
+
+        <div class="personaje">
+            <img src="imgs/gray.jpg" alt="Gray Fullbuster">
+            <h2>Gray</h2>
+        </div>
+
+        <div class="personaje">
+            <img src="imgs/lucy.jpg" alt="Lucy Heartfilia">
+            <h2>Lucy</h2>
+        </div>
+
+        <div class="personaje">
+            <img src="imgs/erza.jpg" alt="Erza Scarlet">
+            <h2>Erza</h2>
+        </div>
+    </div>
+
+    <section class="detalle">
+
+
+        <div class="ficha">
+            <div class="ficha-img">
+                <img src="imgs/dragneel.jpg" alt="Natsu Dragneel">
+            </div>
+            <div class="ficha-texto">
+                <h3>Natsu</h3>
+                <p>
+                    Un mago de fuego del gremio Fairy Tail y también Dragon Slayer. Es impulsivo,
+                    valiente y muy leal a sus amigos, aunque sufre de mareos con cualquier medio
+                    de transporte. Viaja sin descanso con la esperanza de encontrar a Igneel, el
+                    dragón que lo crió.
+                </p>
+            </div>
+        </div>
+
+        <div class="ficha">
+            <div class="ficha-img">
+                <img src="imgs/fullboster.jpg" alt="Gray Fullbuster">
+            </div>
+            <div class="ficha-texto">
+                <h3>Gray</h3>
+                <p>
+                    Un mago de hielo con un carácter frío pero muy protector con su gremio. Tiene
+                    la costumbre de quitarse la ropa sin darse cuenta y mantiene una rivalidad
+                    constante con Natsu. Su pasado está marcado por la pérdida de su familia y por
+                    su maestra Ur, quien le enseñó a usar la magia.
+                </p>
+            </div>
+        </div>
+
+        <div class="ficha">
+            <div class="ficha-img">
+                <img src="imgs/heartfilia.jpg" alt="Lucy Heartfilia">
+            </div>
+            <div class="ficha-texto">
+                <h3>Lucy</h3>
+                <p>
+                    Una maga celestial que huyó de una familia adinerada para cumplir su sueño de
+                    unirse a Fairy Tail. Invoca espíritus mediante llaves mágicas y, además de
+                    luchar, escribe una novela sobre sus aventuras. Es la compañera inseparable de
+                    Natsu y su equipo.
+                </p>
+            </div>
+        </div>
+
+        <div class="ficha">
+            <div class="ficha-img">
+                <img src="imgs/scarlet.jpg" alt="Erza Scarlet">
+            </div>
+            <div class="ficha-texto">
+                <h3>Erza</h3>
+                <p>
+                    Conocida como "Titania", es una de las magas más poderosas de Fairy Tail.
+                    Puede cambiar de armadura y de arma en pleno combate gracias a su magia de
+                    reequipamiento. Es seria, disciplinada y firme, pero siempre protege con su
+                    vida a sus compañeros.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+</html>
